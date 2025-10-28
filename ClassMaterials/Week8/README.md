@@ -43,12 +43,12 @@ We've provided a data set taken from this Kaggle data source: https://www.kaggle
 
 The original set was a CSV with only two columns. We removed the additional column you don't need and converted it to a .txt file. Each line is a single review, which should make your processing a lot simpler. NOTE: Each line starts and ends with "" from the original CSV structure, but that shouldn't really effect your prompt (might actually make it easier).
 
-**You may Generative AI as much as you want for writing this code** There is a lot of documentation out there for how to work with the Batch API, use it to your advantage. This is 1-credit class, we don't want this to take forever :) but we do want you to be familiar with the process of making batch requests.
+**You may use Generative AI as much as you want for writing this code** There is a lot of documentation out there for how to work with the Batch API, so use it to your advantage. This is 1-credit class. We don't want this to take forever :) but we do want you to be familiar with the process of making batch requests.
 
 ### Hints
 * Batch processors use JSONL files, or JSON Lines, files. These are files with a **separate JSON object on each line**. 
 * If you're having trouble with your JSONL file being marked as invalid format, here are some things to check:
-    * Trailing newlines - Some systems are really picky about having an extra new line at the end, some REALLY don't want it. Try both
+    * Trailing newlines - Some systems are really picky about having an extra new line at the end, some REALLY don't want it. Try both.
     * Lines are too long - In some cases, really long lines will prevent the JSONL from parsing. This shouldn't be a problem (it takes a lot), but it's something to watch for if your prompt gets really long.
 
 
@@ -66,7 +66,7 @@ The final result for each item in your batch should be in the following JSON for
 ```
 
 **Description of each item:**
-* **movie_name**: The title of the movie. Not all reviews actually include this though, so for the ones that don't use a null value. 
+* **movie_name**: The title of the movie. Not all reviews actually include this though, so for the ones that don't, use a null value. 
 * **recommended**: Did the author of the review recommend the movie? This should be a tri-state boolean (true, false, null). Null should only be applied in the case where you really can't tell.
 * **genre**: The genre of the movie being reviewed. Null should be applied when it's not evident from the review. 
 * **your_interesting_fact**: Pick something you, as a movie viewer, would like to know before you watch a movie and see if you can extract it from the reviews. For example, trigger warnings (like the site: https://www.doesthedogdie.com/) or maybe you don't like long (or short movies) and want to get a feel for length. Whatever you choose, make sure at least some of the reviews can give you a result. 
