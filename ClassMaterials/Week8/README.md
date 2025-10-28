@@ -5,9 +5,9 @@ This week, your goal is to process the provided dataset of movie review data and
 ## Instructions
 
 ### What To Do
-First, **design a prompt** to get the information you want. 
+First, **design a prompt** to get the information specified below. 
 
-Then, **write a command-line tool** to perform a batch request, it should have the following options:
+Then, **write a command-line tool** to perform a batch request, it should have the following options (interface options, menu, etc. are your choice):
 
 Send Batch Request
 1. Process the provided input file
@@ -17,36 +17,36 @@ Send Batch Request
 
 Read Batch Result
 1. Check status of batch
-2. If batch is completed, retreive the results
+2. If batch is completed, retrieve the results
 3. Store results locally in a .jsonl file (you'll submit this later)
 
 Process the Results 
 1. Read the results (handling any errors, like poorly formed JSON, by writing a message to the console)
-2. Convert results into a JSON array and output a single JSON file
+2. Convert results into a JSON array and output a single JSON file (you'll submit this too)
 3. Report the following metrics:
     * Which movie has the most reviews (or output "No duplicate reviews found")
     * The top 5 genres and how many reviews there were for each
 
 
 ### How To Do It
-There's a guide here for how to process OpenAPI batch requests: https://platform.openai.com/docs/guides/batch
+Here's the documentation here for how to process OpenAPI batch requests: https://platform.openai.com/docs/guides/batch
 
 Note that the batch processor is _significantly_ asynchronous! As in, it may take _hours_ for the request to comlete. That's why the application is separated the way it is above.
 
 The nice thing about batch requests is that they run when the load is lower, so they cost less... BUT that also means you may not get an immediate response. However, it's often fairly quick, so don't hestitate to check back in a few minutes.
 
 #### The API Key
-Use the API key from Moodle when sending your batch requests to OpenAI. 
+Use the API key from Week 6 on Moodle when sending your batch requests to OpenAI. 
 
 #### The Data Set
 We've provided a data set taken from this Kaggle data source: https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews/data 
 
-The original set was a CSV with only two columns. We removed the additional column you don't need and converted it to a .txt file. Each line is a single review, which should make your processing a lot simpler. NOTE: Each line starts and ends with "" from the original CSV structure, but that shouldn't really effect your prompt (might actually make it easier).
+The original set was a CSV with only two columns. We removed the additional column you don't need and converted it to a .txt file. Each line is a single review, which should make your processing a lot simpler. NOTE: Each line starts and ends with "" from the original CSV structure, but that shouldn't really affect your prompt (might actually make it easier).
 
 **You may use Generative AI as much as you want for writing this code** There is a lot of documentation out there for how to work with the Batch API, so use it to your advantage. This is 1-credit class. We don't want this to take forever :) but we do want you to be familiar with the process of making batch requests.
 
 ### Hints
-* Batch processors use JSONL files, or JSON Lines, files. These are files with a **separate JSON object on each line**. 
+* Batch processors use JSONL, or JSON Lines, files. These are files with a **separate JSON object on each line**. 
 * If you're having trouble with your JSONL file being marked as invalid format, here are some things to check:
     * Trailing newlines - Some systems are really picky about having an extra new line at the end, some REALLY don't want it. Try both.
     * Lines are too long - In some cases, really long lines will prevent the JSONL from parsing. This shouldn't be a problem (it takes a lot), but it's something to watch for if your prompt gets really long.
@@ -81,8 +81,8 @@ The final result for each item in your batch should be in the following JSON for
 ## Submission Instructions
 Zip up and submit the following to the Week 8 dropbox:
 
-* reflection.md - A file containing your answers to the Reflection Questions
-* prompt.md - A file containing your prompt
+* reflection.md - A Markdown file containing your answers to the Reflection Questions
+* prompt.md - A Markdown file containing your prompt
 * result.jsonl - The result you got from the batch request
 * final.json - The updated json after you parsed the jsonl file
 * screenshot.png - A screenshot of the output from the Process the Results step
