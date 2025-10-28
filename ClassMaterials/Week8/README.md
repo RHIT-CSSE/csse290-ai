@@ -2,6 +2,8 @@
 
 This week, your goal is to process the provided dataset of movie review data and extract the information specified below. 
 
+## Instructions
+
 ### What To Do
 First, **design a prompt** to get the information you want. 
 
@@ -50,10 +52,9 @@ The original set was a CSV with only two columns. We removed the additional colu
     * Lines are too long - In some cases, really long lines will prevent the JSONL from parsing. This shouldn't be a problem (it takes a lot), but it's something to watch for if your prompt gets really long.
 
 
-
 ### Writing Your Prompt
 
-The final result for each item in your batchshould be in the following JSON format (each item is described below that):
+The final result for each item in your batch should be in the following JSON format (each item is described below that):
 
 ```
 {
