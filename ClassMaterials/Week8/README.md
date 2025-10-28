@@ -55,7 +55,7 @@ The original set was a CSV with only two columns. We removed the additional colu
 
 The final result for each item in your batchshould be in the following JSON format (each item is described below that):
 
-```json
+```
 {
     movie_name: <string>,
     recommended: <nullable boolean>,
