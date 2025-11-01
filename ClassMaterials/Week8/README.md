@@ -38,6 +38,8 @@ The nice thing about batch requests is that they run when the load is lower, so 
 #### The API Key
 Use the API key **for Week 8** on Moodle when sending your batch requests to OpenAI. NOTE: This instruction has been updated, as the Week 6 key did not have the permissions that you need.
 
+**WARNING**: Please test your code and prompt with a shortened dataset file to avoid excessive requests and cost on our account. 
+
 #### The Data Set
 We've provided a data set taken from this Kaggle data source: https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews/data 
 
