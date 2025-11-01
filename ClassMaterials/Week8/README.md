@@ -36,7 +36,7 @@ Note that the batch processor is _significantly_ asynchronous! As in, it may tak
 The nice thing about batch requests is that they run when the load is lower, so they cost less... BUT that also means you may not get an immediate response. However, it's often fairly quick, so don't hestitate to check back in a few minutes.
 
 #### The API Key
-Use the API key from Week 6 on Moodle when sending your batch requests to OpenAI. 
+Use the API key **for Week 8** on Moodle when sending your batch requests to OpenAI. NOTE: This instruction has been updated, as the Week 6 key did not have the permissions that you need.
 
 #### The Data Set
 We've provided a data set taken from this Kaggle data source: https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews/data 
