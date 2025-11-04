@@ -4,7 +4,7 @@ You could spend a very long time tinkering MCP Servers, learning the full capabi
 
 ## Get this sample MCP server working with the SDK
 
-1. Install the MCP Python SDK: `pip install "mcp\[cli]"`.
+1. Install the MCP Python SDK: `pip install "mcp[cli]"`.
 2. There is a sample Remote MCP Server in this folder. Get it working with `mcp dev`.
 
    1. I found my mcp.exe in my AppData Python folder here: `c:\\Users\\hays\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\mcp.exe`.
@@ -13,7 +13,7 @@ You could spend a very long time tinkering MCP Servers, learning the full capabi
    4. Now make a *second* Terminal in VS Code. You should be able run `mcp.exe dev ./mcpserver.py` and the browser should automatically open a generic page for testing MCP servers.
    5. The browser will have a box on the left for you to enter the URL to the MCP Server. The URL you need to enter is `http://localhost:8080/mcp`.
    6. Select Tools -> List Tools to load the tools from the MCP server.
-   7. Below the Clear button, `thing\_a\_ma\_bobs` should show up as the only tool installed. (you might need to *scroll*). Click it, and a form will open that lets you test the call to the MCP Server.
+   7. Below the Clear button, `thing_a_ma_bobs` should show up as the only tool installed. (you might need to *scroll*). Click it, and a form will open that lets you test the call to the MCP Server.
    8. Enter a=2 and b=3, *scroll down*, then click Run Tool.
    9. Your VS Code should start flashing at you from the Task Bar. It should be stopped on the breakpoint that you set.
    10. Press Continue in VS Code to finish executing.
